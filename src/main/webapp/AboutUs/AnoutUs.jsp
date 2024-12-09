@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Interra</title>
-    
+
     <!-- CSS for Styling -->
     <style>
         /* General Reset */
@@ -75,8 +75,10 @@
             border-radius: 10px;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             text-align: center;
-            width: 280px;
+            width: 300px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .service-card:hover {
@@ -91,47 +93,24 @@
             margin-bottom: 10px;
         }
 
-        /* Team Section */
-        .team-section {
-            text-align: center;
-            margin: 40px 0;
+        .service-card h3 {
+            position: relative;
+            z-index: 2;
         }
 
-        .team-members {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .team-member {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 150px;
-            transition: transform 0.3s ease;
-        }
-
-        .team-member:hover {
-            transform: scale(1.1);
-        }
-
-        .team-member img {
-            width: 100%;
-            border-radius: 50%;
-            margin-bottom: 10px;
+        .service-card p {
+            position: relative;
+            z-index: 2;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            font-size: 14px;
+            font-size: 16px;
             margin: 20px 0;
-            color: #555;
-            border-top: 2px solid #333;
-            padding: 10px;
+            color: #fff;
+            border-top: 2px solid #fff;
+            padding: 20px;
         }
 
         /* Animation */
@@ -175,43 +154,21 @@
     <!-- Services Section -->
     <section class="services-container">
         <div class="service-card">
-            <img src="https://via.placeholder.com/150" alt="Web Development">
+            <img src="https://th.bing.com/th/id/OIP.Olj2cCGuzce9Lbl8BPKAnAHaEJ?w=310&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7/150" alt="Web Development">
             <h3>Web Development</h3>
             <p>Building interactive, user-friendly, and dynamic websites that meet business goals.</p>
         </div>
         <div class="service-card">
-            <img src="https://via.placeholder.com/150" alt="AI Solutions">
+            <img src="https://th.bing.com/th/id/OIP.D3PTgwq2FgE1OurXFja_agHaEv?w=250&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7/150" alt="AI Solutions">
             <h3>AI Solutions</h3>
             <p>Leverage artificial intelligence to automate tasks and unlock data insights.</p>
         </div>
         <div class="service-card">
-            <img src="https://via.placeholder.com/150" alt="Mobile Apps">
+            <img src="https://th.bing.com/th/id/OIP.rGK2wpNmrt9_jWhhbg6BhwHaEp?w=281&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7/150" alt="Mobile Apps">
             <h3>Mobile App Development</h3>
             <p>Designing intuitive, scalable, and engaging mobile applications for various platforms.</p>
         </div>
     </section>
-
-    <!-- Team Section -->
-    <div class="team-section">
-        <h2 class="section-title">Meet Our Experts</h2>
-        <div class="team-members">
-            <div class="team-member">
-                <img src="https://via.placeholder.com/100" alt="Team Member 1">
-                <p>John Doe</p>
-                <p>CEO</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/100" alt="Team Member 2">
-                <p>Jane Doe</p>
-                <p>CTO</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/100" alt="Team Member 3">
-                <p>Alex Smith</p>
-                <p>Lead Designer</p>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer Section -->
     <footer>

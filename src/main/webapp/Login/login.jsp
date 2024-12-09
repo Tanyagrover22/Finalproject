@@ -29,7 +29,7 @@
             </div>
             <div id="error-message" class="error-message"></div>
             <button type="submit">Login</button>
-            <p>Don't have an account? <a href="/Registration/registration.jsp">Register here</a></p>
+            <p>Don't have an account? <a href="${pageContext.request.contextPath}/Registration/registration.jsp">Register here</a></p>
         </form>
     </div>
 

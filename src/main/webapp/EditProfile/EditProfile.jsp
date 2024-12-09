@@ -103,6 +103,21 @@
             background: #c0392b;
         }
 
+        /* Message Styling */
+        .message {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .message.success {
+            color: green;
+        }
+
+        .message.error {
+            color: red;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -120,7 +135,24 @@
 <body>
     <div class="container">
         <h2>Edit Your Profile</h2>
-        <form id="editProfileForm" action="${pageContext.request.contextPath}/saveProfile" method="post">
+
+        <!-- Display Success/Error Messages -->
+        <% 
+            if (request.getAttribute("successMessage") != null) { 
+        %>
+            <p class="message success"><%= request.getAttribute("successMessage") %></p>
+        <% 
+            } else if (request.getAttribute("errorMessage") != null) { 
+        %>
+            <p class="message error"><%= request.getAttribute("errorMessage") %></p>
+        <% 
+            } 
+        %>
+
+        <!-- Form -->
+        
+      <form id="editProfileForm" action="${pageContext.request.contextPath}/saveProfile" method="post">
+      
             <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="firstName" value="<%= session.getAttribute("firstName") %>" required />
 
