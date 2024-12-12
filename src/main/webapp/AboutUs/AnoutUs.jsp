@@ -39,6 +39,22 @@
             text-transform: uppercase;
         }
 
+        .back-button {
+            margin: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #ff5722;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #e64a19;
+        }
+
         /* Section Title */
         .section-title {
             font-size: 28px;
@@ -76,6 +92,7 @@
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             text-align: center;
             width: 300px;
+            height: 320px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -94,13 +111,13 @@
         }
 
         .service-card h3 {
-            position: relative;
-            z-index: 2;
+            font-size: 20px;
+            margin-bottom: 10px;
         }
 
         .service-card p {
-            position: relative;
-            z-index: 2;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
         /* Footer */
@@ -112,33 +129,17 @@
             border-top: 2px solid #fff;
             padding: 20px;
         }
-
-        /* Animation */
-        @keyframes bounce {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .animated-header h1 {
-            animation: bounce 2s infinite ease-in-out;
-        }
     </style>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <h1 class="animated-header">Welcome to Interra's About Us</h1>
+        <h1>Welcome to Interra's About Us</h1>
     </header>
+
+    <!-- Back Button -->
+    <a href="${pageContext.request.contextPath}/Welcome/welcome.jsp" class="back-button">Back to Welcome Page</a>
 
     <!-- Section Title -->
     <h2 class="section-title">Our Vision, Our Mission, Our Services</h2>
@@ -154,19 +155,44 @@
     <!-- Services Section -->
     <section class="services-container">
         <div class="service-card">
-            <img src="https://th.bing.com/th/id/OIP.Olj2cCGuzce9Lbl8BPKAnAHaEJ?w=310&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7/150" alt="Web Development">
+            <img src="https://th.bing.com/th/id/OIP.Olj2cCGuzce9Lbl8BPKAnAHaEJ?w=310&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Web Development">
             <h3>Web Development</h3>
             <p>Building interactive, user-friendly, and dynamic websites that meet business goals.</p>
         </div>
         <div class="service-card">
-            <img src="https://th.bing.com/th/id/OIP.D3PTgwq2FgE1OurXFja_agHaEv?w=250&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7/150" alt="AI Solutions">
+            <img src="https://th.bing.com/th/id/OIP.D3PTgwq2FgE1OurXFja_agHaEv?w=250&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="AI Solutions">
             <h3>AI Solutions</h3>
             <p>Leverage artificial intelligence to automate tasks and unlock data insights.</p>
         </div>
         <div class="service-card">
-            <img src="https://th.bing.com/th/id/OIP.rGK2wpNmrt9_jWhhbg6BhwHaEp?w=281&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7/150" alt="Mobile Apps">
+            <img src="https://th.bing.com/th/id/OIP.rGK2wpNmrt9_jWhhbg6BhwHaEp?w=281&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Mobile Apps">
             <h3>Mobile App Development</h3>
             <p>Designing intuitive, scalable, and engaging mobile applications for various platforms.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://th.bing.com/th?id=OIP.dmMrRnnw7omRMqNLu4qqswHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Software Development">
+            <h3>Software Development</h3>
+            <p>Creating robust, scalable, and efficient software tailored to business needs.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://th.bing.com/th?id=OIP.dkUemTmzSWG-aTs1XvkU8gHaE1&w=309&h=202&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Cloud Services">
+            <h3>Cloud Services</h3>
+            <p>Providing secure, scalable, and cost-efficient cloud solutions to accelerate business growth.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://th.bing.com/th?id=OIP.kI3ZfQqP71Ju-F9kODqgsgHaGL&w=273&h=228&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Data Analytics">
+            <h3>Data Analytics</h3>
+            <p>Unlocking the potential of data with insightful analytics and visualization tools.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://th.bing.com/th?id=OIP.u9rmMa7F-vTpCRI4184ldAHaDQ&w=350&h=154&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Cybersecurity">
+            <h3>Cybersecurity</h3>
+            <p>Ensuring data and system security with advanced cybersecurity measures.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://th.bing.com/th?id=OIP.cYC5Qe6W9c7QJBpKzPvFdAHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Blockchain">
+            <h3>Blockchain Solutions</h3>
+            <p>Innovative blockchain solutions for secure and transparent transactions.</p>
         </div>
     </section>
 

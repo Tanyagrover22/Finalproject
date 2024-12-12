@@ -149,10 +149,8 @@
             } 
         %>
 
-        <!-- Form -->
-        
-      <form id="editProfileForm" action="${pageContext.request.contextPath}/saveProfile" method="post">
-      
+        <!-- Profile Edit Form -->
+        <form id="editProfileForm" action="${pageContext.request.contextPath}/saveProfile" method="post">
             <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="firstName" value="<%= session.getAttribute("firstName") %>" required />
 
@@ -160,7 +158,7 @@
             <input type="text" id="lastName" name="lastName" value="<%= session.getAttribute("lastName") %>" required />
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="<%= session.getAttribute("email") %>" required />
+            <input type="email" id="email" name="email" value="<%= session.getAttribute("email") %>" readonly />
 
             <label for="address">Address</label>
             <input type="text" id="address" name="address" value="<%= session.getAttribute("address") %>" />
