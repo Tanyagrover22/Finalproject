@@ -1,18 +1,17 @@
-/* General Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
 }
 
-/* Navbar */
 .navbar {
   background: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
@@ -21,7 +20,7 @@ body {
   font-size: 1.5em;
 }
 
-/* Registration Form */
+
 .register-container {
   max-width: 500px;
   margin: 50px auto;
