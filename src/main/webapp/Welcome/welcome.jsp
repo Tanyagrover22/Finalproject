@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Interra</title>
     <style>
-        /* General Reset */
+      
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body with Dark Blue Gradient Background */
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(to right, #000080, #1E3C72);
@@ -21,7 +20,7 @@
             padding: 0;
         }
 
-        /* Header Section */
+      
         header {
             text-align: center;
             padding: 20px;
@@ -40,7 +39,6 @@
             margin-top: 10px;
         }
 
-        /* Navigation Bar Styling */
         nav {
             background-color: #333;
             padding: 10px 0;
@@ -108,7 +106,6 @@
             line-height: 1.7;
         }
 
-        /* Buttons Styling with Gradient */
         .button-container a {
             display: inline-block;
             padding: 10px 20px;
@@ -125,7 +122,7 @@
             background: linear-gradient(to right, #00f260, #4facfe);
         }
 
-        /* Footer Styling */
+      
         footer {
             text-align: center;
             padding: 15px;
@@ -135,7 +132,7 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive Design */
+      
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
@@ -153,13 +150,12 @@
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <h1>Welcome, <%= session.getAttribute("firstName") %> <%= session.getAttribute("lastName") %>!</h1>
         <p>Your personalized journey with Interra starts here.</p>
     </header>
     
-    <!-- Navigation Section -->
+   
     <nav>
         <ul>
             <li><a href="#details">Details</a></li>
@@ -169,7 +165,6 @@
         </ul>
     </nav>
 
-    <!-- User Details Section -->
     <section id="details">
         <h2>Your Details</h2>
         <p><strong>Email:</strong> <%= session.getAttribute("email") %></p>
@@ -180,7 +175,7 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
+
     <section id="about">
         <h2>About Us</h2>
         <p>We at Interra aim to empower individuals by solving modern technological challenges and fostering innovation with simplicity and creativity.</p>
@@ -189,7 +184,7 @@
         </div>
     </section>
 
-    <!-- Dashboard Section -->
+   
     <section id="dashboard">
         <h2>Your Dashboard</h2>
         <p>Hello, <strong><%= session.getAttribute("username") %></strong>! Manage your tools, insights, and projects from here.</p>
@@ -198,7 +193,7 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+ 
     <footer>
         <p>&copy; 2024 Interra Project. All Rights Reserved. Designed with passion and creativity.</p>
     </footer>
