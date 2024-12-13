@@ -7,14 +7,14 @@
     <title>Dashboard - Interra</title>
     <link rel="stylesheet" href="welcome.css">
     <style>
-        /* General Reset */
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body & Background */
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -25,7 +25,7 @@
             overflow-y: auto; /* Enable scroll if necessary */
         }
 
-        /* Header Section */
+    
         header {
             text-align: center;
             padding: 20px 0;
@@ -45,7 +45,7 @@
             font-style: italic;
         }
 
-        /* Navigation Bar */
+    
         nav {
             display: flex;
             justify-content: center;
@@ -82,7 +82,7 @@
             height: calc(100vh - 180px); /* Adjust to fit viewport */
         }
 
-        /* User Details Section */
+        
         #user-details {
             background: #444;
             padding: 20px;
@@ -97,7 +97,7 @@
             color: #2980b9;
         }
 
-        /* Company Highlights */
+    
         #highlights {
             display: flex;
             justify-content: space-between;
@@ -125,7 +125,7 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
         }
 
-        /* Footer Section */
+    
         footer {
             text-align: center;
             padding: 15px 0;
@@ -150,19 +150,19 @@
 </head>
 
 <body>
-    <!-- Header Section -->
+    
     <header>
         <h1>Welcome to Interra Dashboard, <%= session.getAttribute("firstName") %>!</h1>
         <p>Your personalized platform for innovation and creativity awaits you.</p>
     </header>
 
-    <!-- Navigation -->
+
     <nav>
         <a href="${pageContext.request.contextPath}/EditProfile/EditProfile.jsp">Edit Profile</a>
         <a href="${pageContext.request.contextPath}/Logout/logout.jsp">Logout</a>
     </nav>
 
-    <!-- Main Content Section -->
+
     <main>
         <!-- User Details Section -->
         <section id="user-details">
@@ -175,7 +175,7 @@
             <p><strong>Address:</strong> <%= session.getAttribute("address") %></p>
         </section>
 
-        <!-- Company Highlights Section -->
+        
         <section id="highlights">
             <div class="highlight-card">
                 <h4>Innovative Solutions</h4>
@@ -192,7 +192,7 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
+    
     <footer>
         &copy; 2024 Interra Project | Powered by Creativity & Innovation
     </footer>
