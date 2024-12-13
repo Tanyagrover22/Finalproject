@@ -18,7 +18,6 @@ import jakarta.servlet.http.HttpSession;
 public class SaveProfileServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    // Database connection details
     private static final String DB_URL = "jdbc:mysql://localhost:3306/registration";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "Tanya@750";
@@ -38,11 +37,11 @@ public class SaveProfileServlet extends HttpServlet {
         PreparedStatement pstmt = null;
 
         try {
-            // Establish a connection to the database
+          
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
-            // SQL query to update user profile
+           
             String sql = "UPDATE users SET first_name = ?, last_name = ?, address = ?, city = ?, state = ? WHERE email = ?";
 
             pstmt = conn.prepareStatement(sql);
@@ -51,11 +50,11 @@ public class SaveProfileServlet extends HttpServlet {
             pstmt.setString(3, address);
             pstmt.setString(4, city);
             pstmt.setString(5, state);
-            pstmt.setString(6, email); // Assuming email is used as a unique identifier
+            pstmt.setString(6, email); 
 
             int rowsUpdated = pstmt.executeUpdate();
 
-            // Update session attributes to reflect the changes immediately
+           
             if (rowsUpdated > 0) {
                 HttpSession session = request.getSession();
                 session.setAttribute("firstName", firstName);
@@ -64,17 +63,17 @@ public class SaveProfileServlet extends HttpServlet {
                 session.setAttribute("city", city);
                 session.setAttribute("state", state);
 
-                // Set success message
+           
                 request.setAttribute("successMessage", "Profile updated successfully.");
             } else {
-                // Set error message
+             
                 request.setAttribute("errorMessage", "Failed to update profile. Please try again.");
             }
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
             request.setAttribute("errorMessage", "An error occurred: " + e.getMessage());
         } finally {
-            // Close database resources
+           
             try {
                 if (pstmt != null) pstmt.close();
                 if (conn != null) conn.close();
@@ -83,7 +82,6 @@ public class SaveProfileServlet extends HttpServlet {
             }
         }
 
-        // Forward the request back to the editProfile.jsp page
         request.getRequestDispatcher("/EditProfile/EditProfile.jsp").forward(request, response);
     }
 }
