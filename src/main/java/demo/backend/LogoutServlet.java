@@ -17,13 +17,13 @@ public class LogoutServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Get the current session
+      
         HttpSession session = request.getSession(false); // Get existing session, don't create new
         if (session != null) {
-            session.invalidate(); // Invalidate the session
+            session.invalidate();
         }
 
-        // Redirect to login page after logout
+      
         response.sendRedirect(request.getContextPath() + "/Login/login.jsp");
     }
 
