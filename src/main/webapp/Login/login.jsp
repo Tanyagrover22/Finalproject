@@ -8,14 +8,14 @@
     <script defer src="Login.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
+
     <nav class="navbar">
         <div class="container">
             <a href="index.jsp" class="brand">Interra</a>
         </div>
     </nav>
 
-    <!-- Login Form -->
+    
     <div class="login-container">
         <form id="loginForm" action="LoginServlet" method="post">
             <h2>Login to Interra</h2>
@@ -33,7 +33,7 @@
         </form>
     </div>
 
-    <!-- Footer -->
+    
     <footer class="footer">
         <p>&copy; 2024 Interra Project. All Rights Reserved.</p>
     </footer>
