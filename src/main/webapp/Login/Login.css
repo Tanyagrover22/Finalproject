@@ -10,7 +10,7 @@ body {
     color: #fff;
 }
 
-/* Navbar Styling */
+
 .navbar {
     background: rgba(0, 0, 0, 0.7);
     padding: 10px 20px;
@@ -116,7 +116,7 @@ a {
     text-decoration: none;
 }
 
-/* Footer Styling */
+
 .footer {
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
