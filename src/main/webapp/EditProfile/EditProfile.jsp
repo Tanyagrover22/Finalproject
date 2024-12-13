@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile - Interra</title>
     <style>
-        /* General Reset */
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Styling */
+        
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #000, #434343);
@@ -26,7 +26,7 @@
             padding: 20px;
         }
 
-        /* Main Container */
+        
         .container {
             background: #fff;
             color: #333;
@@ -43,7 +43,7 @@
             color: #6a11cb;
         }
 
-        /* Form Styling */
+        
         form {
             display: flex;
             flex-direction: column;
@@ -70,7 +70,7 @@
             box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
         }
 
-        /* Button Container */
+        
         .button-container {
             display: flex;
             justify-content: space-between;
@@ -136,7 +136,7 @@
     <div class="container">
         <h2>Edit Your Profile</h2>
 
-        <!-- Display Success/Error Messages -->
+    
         <% 
             if (request.getAttribute("successMessage") != null) { 
         %>
@@ -149,7 +149,7 @@
             } 
         %>
 
-        <!-- Profile Edit Form -->
+        
         <form id="editProfileForm" action="${pageContext.request.contextPath}/saveProfile" method="post">
             <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="firstName" value="<%= session.getAttribute("firstName") %>" required />
@@ -169,7 +169,7 @@
             <label for="state">State</label>
             <input type="text" id="state" name="state" value="<%= session.getAttribute("state") %>" />
 
-            <!-- Button Section -->
+        
             <div class="button-container">
                 <button type="submit" id="save-btn">Save</button>
                 <button type="button" id="back-btn" onclick="window.location.href='${pageContext.request.contextPath}/Dashboard/dashboard.jsp'">Back</button>
@@ -178,7 +178,7 @@
     </div>
 
     <script>
-        // Simple Form Validation Feedback
+        
         const form = document.getElementById('editProfileForm');
         form.addEventListener('submit', function (event) {
             const inputs = form.querySelectorAll('input');
