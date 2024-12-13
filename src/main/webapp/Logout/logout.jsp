@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logout - Interra</title>
     <style>
-        /* General Reset */
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Styling */
+
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(to bottom right, #000, #434343);
@@ -26,7 +26,7 @@
             padding: 20px;
         }
 
-        /* Logout Container */
+        
         .container {
             background: #fff;
             color: #333;
@@ -39,21 +39,21 @@
             animation: slideDown 0.5s ease-out;
         }
 
-        /* Title */
+    
         .container h2 {
             color: #6a11cb;
             margin-bottom: 20px;
             font-size: 1.8rem;
         }
 
-        /* Message */
+        
         .container p {
             margin-bottom: 20px;
             font-size: 1rem;
             line-height: 1.5;
         }
 
-        /* Button Styling */
+        
         .button-container {
             display: flex;
             justify-content: space-around;
@@ -99,7 +99,7 @@
             }
         }
 
-        /* Responsive Design */
+        
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
