@@ -7,21 +7,21 @@
   <link rel="stylesheet" href="registration.css">
   <script defer src="registration.js"></script>
   <style>
-    /* General Reset */
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Body */
+    
     body {
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: #fff;
     }
 
-    /* Navbar */
+    
     .navbar {
       background: rgba(0, 0, 0, 0.8);
       padding: 10px 20px;
@@ -30,7 +30,7 @@
       font-size: 1.5em;
     }
 
-    /* Registration Form */
+   
     .register-container {
       max-width: 800px;
       margin: 50px auto;
@@ -116,7 +116,7 @@
     </div>
   </nav>
 
-  <!-- Registration Form -->
+ 
   <div class="register-container">
     <form id="registerForm" action="RegisterServlet" method="POST" onsubmit="return validateForm();">
       <h2>Register</h2>
@@ -186,7 +186,7 @@
     </form>
   </div>
 
-  <!-- Footer -->
+
   <footer class="footer">
     <p>&copy; 2024 Registration Project. All Rights Reserved.</p>
   </footer>
