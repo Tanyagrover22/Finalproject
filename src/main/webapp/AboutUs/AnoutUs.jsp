@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Interra</title>
 
-    <!-- CSS for Styling -->
+    
     <style>
-        /* General Reset */
+    
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Styling */
+        
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(to right, #6a11cb, #2575fc);
@@ -24,7 +24,7 @@
             padding: 20px;
         }
 
-        /* Header */
+        
         header {
             text-align: center;
             padding: 10px 0;
@@ -55,7 +55,7 @@
             background-color: #e64a19;
         }
 
-        /* Section Title */
+        
         .section-title {
             font-size: 28px;
             text-align: center;
@@ -64,7 +64,7 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
         }
 
-        /* About Us Intro */
+        
         .intro {
             max-width: 800px;
             margin: 0 auto 40px;
@@ -74,7 +74,7 @@
             color: #f0f0f0;
         }
 
-        /* Services Section */
+        
         .services-container {
             display: flex;
             justify-content: space-around;
@@ -138,13 +138,11 @@
         <h1>Welcome to Interra's About Us</h1>
     </header>
 
-    <!-- Back Button -->
+    
     <a href="${pageContext.request.contextPath}/Welcome/welcome.jsp" class="back-button">Back to Welcome Page</a>
 
-    <!-- Section Title -->
-    <h2 class="section-title">Our Vision, Our Mission, Our Services</h2>
 
-    <!-- Intro Section -->
+    <h2 class="section-title">Our Vision, Our Mission, Our Services</h2>
     <div class="intro">
         <p>
             At Interra, we are committed to innovation, creativity, and excellence in delivering software solutions. Our
@@ -152,7 +150,7 @@
         </p>
     </div>
 
-    <!-- Services Section -->
+
     <section class="services-container">
         <div class="service-card">
             <img src="https://th.bing.com/th/id/OIP.Olj2cCGuzce9Lbl8BPKAnAHaEJ?w=310&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Web Development">
@@ -196,7 +194,7 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+    
     <footer>
         &copy; 2024 Interra. All Rights Reserved.
     </footer>
