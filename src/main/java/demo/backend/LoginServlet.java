@@ -14,19 +14,17 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        // JDBC variables
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         try {
-            // Load the JDBC driver
+          
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Establish a connection to the database
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/registration", "root", "Tanya@750");
 
-            // Query to authenticate user
+           
             String query = "SELECT first_name, last_name, email, gender, address, city, state FROM users WHERE username = ? AND password = ?";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, username);
@@ -35,7 +33,7 @@ public class LoginServlet extends HttpServlet {
             resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                // User authenticated, retrieve details
+               
                 HttpSession session = request.getSession();
                 session.setAttribute("firstName", resultSet.getString("first_name"));
                 session.setAttribute("lastName", resultSet.getString("last_name"));
@@ -46,11 +44,10 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("state", resultSet.getString("state"));
                 session.setAttribute("username", username);
 
-                // Redirect to welcome page
                 response.sendRedirect(request.getContextPath() + "/Welcome/welcome.jsp");
 
             } else {
-                // Login failed
+               
                 request.setAttribute("errorMessage", "Invalid username or password.");
                 RequestDispatcher dispatcher = request.getRequestDispatcher("/Login/login.jsp");
                 dispatcher.forward(request, response);
@@ -59,7 +56,7 @@ public class LoginServlet extends HttpServlet {
             e.printStackTrace();
             response.getWriter().println("Error: " + e.getMessage());
         } finally {
-            // Close resources
+          
             try {
                 if (resultSet != null) resultSet.close();
                 if (preparedStatement != null) preparedStatement.close();
